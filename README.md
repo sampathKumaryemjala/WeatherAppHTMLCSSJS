@@ -19,7 +19,7 @@ Check out the live demo of the application [here](https://weather-app-gamma-self
 
 1. Clone the repository
     ```sh
-    git clone https://github.com/DHRUVKANDPAL/Weather-App.git
+    git clone https://github.com/sampathKumaryemjala/WeatherAppHTMLCSSJS.git
     ```
 2. Open the `index.html` file in your preferred web browser.
 

@@ -26,7 +26,7 @@ function showPosition(position) {
   var today = new Date();
 var year = today.getFullYear();
 var mes = today.getMonth()+1;
-var dia = today.getDate();
+var dia = today.getDate(); 
 var fecha =dia+"/"+mes+"/"+year;
   document.getElementById('date').innerHTML=`${fecha}`;
   async function consume(url, options) {
@@ -35,6 +35,8 @@ var fecha =dia+"/"+mes+"/"+year;
       const result = await response.json();
       console.log(result);
       if(result!==undefined){
+        console.log("result.forecast.forecastday:", result.forecast.forecastday); 
+
         document.getElementById('main').innerHTML=`Weather Forecast for ${result.location.name},${result.location.country}`;
         document.getElementById('location').innerHTML=`${result.location.name}`;
         document.getElementById('temperature').innerHTML=`${result.current.feelslike_c} &deg;C`;
@@ -45,9 +47,9 @@ var fecha =dia+"/"+mes+"/"+year;
         document.getElementById('sunrise').innerHTML=`${result.forecast.forecastday[0].astro.sunrise}`;
         document.getElementById('sunset').innerHTML=`${result.forecast.forecastday[0].astro.sunset}`;
         document.getElementById('Visibility').innerHTML=`${result.current.vis_km} Km`;
-        document.getElementById('image').innerHTML=`<img src="${result.forecast.forecastday[0].day.condition.icon}"></img>`
-        document.getElementById('image2').innerHTML=`<img src="${result.forecast.forecastday[1].day.condition.icon}"></img>`
-        document.getElementById('image3').innerHTML=`<img src="${result.forecast.forecastday[2].day.condition.icon}"></img>`
+        document.getElementById('image').innerHTML=`<img src="https:${result.forecast.forecastday[0].day.condition.icon}"></img>`
+        document.getElementById('image2').innerHTML=`<img src="https:${result?.forecast?.forecastday[1]?.day?.condition?.icon}"></img>`
+        document.getElementById('image3').innerHTML=`<img src="https:${result.forecast.forecastday[2].day.condition.icon}"></img>`
         document.getElementById('Max1').innerHTML=`Maximum Temp: ${result.forecast.forecastday[0].day.maxtemp_c}`
         document.getElementById('Max2').innerHTML=`Maximum Temp: ${result.forecast.forecastday[1].day.maxtemp_c}`
         document.getElementById('Max3').innerHTML=`Maximum Temp: ${result.forecast.forecastday[2].day.maxtemp_c}`

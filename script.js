@@ -48,7 +48,9 @@ async function consume(){
         const sunset=result.forecast.forecastday[0].astro.sunset;
         // const feelslike_c = result.current.feelslike_c;
         if(result!==undefined){
+
             console.log("Feels Like (Celsius):", feelslike_c); 
+            console.log("result.forecast.forecastday:", result.forecast.forecastday); 
             document.getElementById('main').innerHTML=`Weather Forecast for ${result.location.name},${result.location.country}`;
             document.getElementById('location').innerHTML=`${result.location.name}`;
             document.getElementById('temperature').innerHTML=`${result.current.feelslike_c} &deg;C`;
