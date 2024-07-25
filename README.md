@@ -4,7 +4,7 @@ A weather application built using HTML, CSS, and JavaScript that fetches real-ti
 
 ## Live Demo
 
-Check out the live demo of the application [here](https://weather-app-gamma-self.vercel.app/).
+Check out the live demo of the application [here](https://weather-app-htmlcssjs-git-main-sampathkumaryemjalas-projects.vercel.app/).
 
 ## Features
 
